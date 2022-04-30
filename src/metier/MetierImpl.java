@@ -6,6 +6,12 @@ public class MetierImpl implements IMetier {
 	// Couplage Faible
 	private IDao dao;
 	
+	public MetierImpl() {
+	}
+	
+	public MetierImpl(IDao dao) {
+		this.dao = dao;
+	}
 	@Override
 	public double calcul() {
 		double data=dao.getData();
